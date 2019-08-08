@@ -1,35 +1,19 @@
-body{
-    margin:auto 0;
-}
-.zone {
-    color:#FFF;
-    font-size: 1.3em;
-    transition: all 0.3s linear;
-    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+html{
+    font-family: YuGothic,'Yu Gothic',sans-serif;
 }
 
-.sticky{
-    position:fixed;
-    top:0;
-    width:100%;
+body{
+    margin:auto 0;
+    background-color: #496C89;
 }
-.main-nav{
-    display:flex;
-    flex-flow:row;
-    align-content: center;
-    list-style:none;
-    font-size:0.7em;
-    margin:0;
-    height:5vh;
+
+footer{
+    text-align: center;
 }
-@media only screen and (max-width:600px){
-    .main-nav{
-        font-size:0.5em;
-        padding:0;
-    }
-}
-.push{
-    margin-left:auto;
+h6{margin:0;}
+
+h1{margin: 0;
+    padding: 5px
 }
 
 li {
@@ -44,12 +28,87 @@ a {
     text-decoration:none;
 }
 
+p {
+    margin:0;
+    padding:6px;
+}
+
+.title{
+    border-bottom-color: #f5f5f6;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+.zone {
+    color:#FFF;
+    font-size: 1.3em;
+    /* transition: all 0.3s linear; */
+}
+.shadow{
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+.sectionB{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.sticky{
+    position:fixed;
+    top:0;
+    width:100%;
+    border-bottom:2px #003D1A;
+}
+
+.main-nav{
+    display:flex;
+    flex-flow:row;
+    align-content: center;
+    list-style:none;
+    font-size:0.7em;
+    margin:0;
+    height:5vh;
+}
+
+.main-nav h1,.main-nav h2,.main-nav p{
+    color:rgb(216, 216, 216);
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.8);
+}
+
+@media only screen and (max-width:600px){
+    .main-nav{
+        font-size:0.38em;
+        padding:0;
+    }
+    .sectionB{
+        margin:0;
+    }
+}
+.push{
+    margin-left:auto;
+}
+
 .container{
     display:flex;
-    justify-content: center;
-    align-content: center;
-    height: 80vh;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
     background-color: black;
+    border-bottom: 4px #042037 solid;
+}
+#arrowtoright, #arrowtoleft{
+    height: 72px;
+    width: 72px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+#arrowtoright{
+    margin-left:auto;
+    margin-right:4px;
+}
+
+#arrowtoleft{
+    margin-right:auto;
+    margin-left:4px;
 }
 
 .cover{
@@ -57,32 +116,69 @@ a {
 }
 
 .grid-wrapper{
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns:repeat(auto-fill,minmax(350px,1fr));
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     border-radius: 1px;
 }
-.box > img {
-    width:100%;
+
+.boxupperhlf > img {
+    max-width: 100%;
+    max-height: 100%;
 }
 .box{
-    background-color:rgb(66, 66, 66);
-    padding:130px;
+    flex-basis: 300px;
+    background-color:#042037;
+    padding:30px;
     margin:20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    border-radius: 3px;
 }
-footer{
+
+.boxupperhlf{
+    height:72px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxdownerhlf{
+}
+
+.boxdownerhlf>h3{
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 0.1em;
+    margin-bottom: 0.05em;
+}
+
+
+.boxdownerhlf>p{
+    font-size: 0.8em;
     text-align: center;
 }
+
+.strongstyle{
+    text-emphasis-style: dot;
+} 
+
+
+
+
+.blue2{background: #496C89}
+.green2{background: #0F5B30}
 
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
 /***********************************************************************
  *  Green Background
  **********************************************************************/
  .green{
-    background: rgb(65, 133, 83); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgb(65, 133, 83) 0%, #a5c956 100%); /* FF3.6+ */
+    background: #28794C; /* Old browsers */
+    background: -moz-linear-gradient(top,  rgb(65, 133, 83) 0%, #506d11 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(65, 133, 83)), color-stop(100%,#a5c956)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgb(65, 133, 83) 0%,#a5c956 100%); /* Chrome10+,Safari5.1+ */
+    background: -webkit-linear-gradient(top,  #28794C 0%,#4C976D 100%); /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(top,  rgb(65, 133, 83) 0%,#a5c956 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top,  rgb(65, 133, 83) 0%,#a5c956 100%); /* IE10+ */
     background: linear-gradient(top,  rgb(65, 133, 83) 0%,#a5c956 100%); /* W3C */
